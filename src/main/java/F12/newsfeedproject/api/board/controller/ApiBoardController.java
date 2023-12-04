@@ -77,7 +77,7 @@ public class ApiBoardController {
 
   // 게시글 삭제
   @DeleteMapping("/{boardId}")
-  public ResponseEntity<Void> deleteBoard(@PathVariable Long boardId,
+  public ResponseEntity<?> deleteBoard(@PathVariable Long boardId,
       @AuthenticationPrincipal UserDetailsImpl userDetails) {
 
     User user = userDetails.getUser();
@@ -86,7 +86,7 @@ public class ApiBoardController {
     }
 
     apiBoardService.deleteBoard(boardId);
-    return ResponseEntity.noContent().build();
+    return ResponseEntity.ok("요청 성공");
   }
 
   public boolean haveModifyAuthorization(User loginUser, Long boardId) {
