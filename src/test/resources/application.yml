@@ -16,3 +16,11 @@ spring:
         show_sql: true
         highlight_sql: true
       open-in-view : false
+
+jwt:
+  token:
+    header: Authorization
+    secret: dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdA==
+    access-time: 3600000 # 60분
+    refresh-time: 2628000000 # 한달
+    issuer: F12
