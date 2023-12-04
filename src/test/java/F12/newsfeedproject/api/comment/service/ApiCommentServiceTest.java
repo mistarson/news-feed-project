@@ -26,7 +26,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
@@ -56,7 +55,6 @@ class ApiCommentServiceTest {
     class SaveComment {
         @Test
         @DisplayName("댓글을 저장할 수 있다.")
-        @PreAuthorize("isAuthenticated()")
         void saveComment() {
             //given
             User loginUser = getLoginUser();
